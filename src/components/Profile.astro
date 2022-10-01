@@ -1,0 +1,49 @@
+---
+import CommonSection from "./CommonSection.astro";
+
+const communityUrl = 'https://sannomiya.dev';
+---
+
+<CommonSection>
+  <div class="profile-content">
+    <p class="content-title">Profile</p>
+    <div class="content-text">
+      <p>こんにちは！てさおです！</p>
+      <p>
+          現在は神戸にある会社にてRailsエンジニアをしておりますが、<br>
+        フロントエンド、バックエンド、インフラ周りまで一通り浅く広く経験してきました
+      </p>
+      <p>
+        好きな言語：Ruby, Rust<br>
+        興味のある領域：xR, Blockchain
+      </p>
+      <p>
+        <a href={communityUrl} target="_blank">三宮.dev</a>というエンジニアコミュニティを運営しています<br>
+
+      </p>
+    </div>
+  </div>
+  <div class="profile-image">
+    <img src="/assets/profile.jpg" />
+  </div>
+</CommonSection>
+
+<style lang="scss">
+  .profile-content, .profile-image {
+    width: 50%;
+  }
+  .profile-content {
+    .content-title {
+      margin-bottom: 20px;
+      font-size: 48px;
+      font-weight: 700;
+    }
+  }
+  .profile-image {
+    height: 100%;
+    text-align: center;
+    img {
+      max-width: 450px;
+    }
+  }
+</style>
