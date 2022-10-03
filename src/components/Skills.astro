@@ -1,0 +1,51 @@
+---
+import CommonSection from "./CommonSection.astro";
+const languages = ['PHP', 'Ruby', 'Kotlin', 'TypeScript', 'JavaScript', 'C#', 'Rust', 'C++'];
+const frameworks = ['Symfony', 'Laravel', 'Ruby on Rails', 'Spring Boot', 'express', 'Vue.js', 'jQuery', 'AFrame'];
+const others = ['Docker', 'AWS', 'Heroku', 'Firebase' ];
+---
+
+<CommonSection>
+  <div class="skills-content">
+    <p class="content-title">Skills</p>
+    <div class="skill-group">
+      <div class="skill-title">Languages</div>
+      {languages.map(lang => <div class="skill-item">{lang}</div>)}
+    </div>
+    <div class="skill-group">
+      <div class="skill-title">Frameworks</div>
+      {frameworks.map(fw => <div class="skill-item">{fw}</div>)}
+    </div>
+    <div class="skill-group">
+      <div class="skill-title">Others</div>
+      {others.map(skill => <div class="skill-item">{skill}</div>)}
+    </div>
+  </div>
+</CommonSection>
+
+<style lang="scss">
+  $gray: #EEEEEE;
+  .content-title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .skills-content {
+    width: 100%;
+    .skill-group {
+      margin: 0 50px;
+      .skill-title {
+        padding: 20px;
+        background-color: $gray;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .skill-item {
+        width: 100%;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 8px 40px;
+      }
+    }
+  }
+</style>
