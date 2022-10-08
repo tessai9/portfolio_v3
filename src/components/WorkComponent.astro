@@ -1,0 +1,70 @@
+---
+interface WorkButtonParams {
+  buttonText: string;
+  buttonLink: string;
+}
+
+interface Props {
+  workTitle: string;
+  workDescription: string;
+  workButtons?: Array<WorkButtonParams>;
+  workImageUrl?: string;
+}
+
+const {workTitle, workDescription, workImageUrl, workButtons} = Astro.props;
+---
+
+<section class="work-group">
+  <div class="work-text">
+    <p class="work-text-title">{workTitle}</p>
+    <div class="work-text-description">{workDescription}</div>
+    <div class="work-text-buttons">
+      {workButtons?.map(button =>
+        <a href={button.buttonLink} class="work-button">{button.buttonText}</a>
+      )}
+    </div>
+  </div>
+  <div class="work-image">
+    <img src={workImageUrl} />
+  </div>
+</section>
+
+<style lang="scss">
+  .work-group {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    padding: 60px;
+    .work-text {
+      width: 50%;
+      .work-text-title {
+        font-size: 48px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      .work-text-description {
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .work-text-buttons {
+        margin-top: 40px;
+        .work-button {
+          padding: 10px 30px;
+          background-color: #FFF;
+          color: #000;
+          font-weight: 300;
+          text-decoration: none;
+          border: solid 2px #000;
+          border-radius: 20px;
+          box-shadow: 2px 2px 2px gray;
+          &:hover {
+            background-color: #e7e8ec;
+          }
+        }
+      }
+    }
+    .work-image img{
+      width: 500px;
+    }
+  }
+</style>
