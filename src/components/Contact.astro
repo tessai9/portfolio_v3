@@ -1,0 +1,22 @@
+---
+import CommonSection from "./CommonSection.astro";
+const googleFormUrl = "https://forms.gle/6m1TrL6xMdz4Hueh7";
+---
+
+<CommonSection>
+  <div class="contact-content">
+    <p class="content-title">Contact</p>
+    <a href={googleFormUrl}>こちら</a>からお問い合わせいただけます
+  </div>
+</CommonSection>
+
+<style lang="scss">
+  .content-title {
+    margin-bottom: 20px;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .contact-content {
+    width: 100%;
+  }
+</style>
