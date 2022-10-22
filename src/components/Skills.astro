@@ -6,46 +6,25 @@ const others = ['Docker', 'AWS', 'Heroku', 'Firebase' ];
 ---
 
 <CommonSection idName={"skills"}>
-  <div class="skills-content">
-    <p class="content-title">Skills</p>
-    <div class="skill-group">
-      <div class="skill-title">Languages</div>
-      {languages.map(lang => <div class="skill-item">{lang}</div>)}
+  <div class="w-full">
+    <p class="mb-[20px] text-[48px] font-[700]">Skills</p>
+    <div class="mx-0 my-[50px]">
+      <div class="skill-title p-[20px] text-[20px] font-bold">Languages</div>
+      {languages.map(lang => <div class="w-full text-[16px] font-[400] px-[40px] py-[8px]">{lang}</div>)}
     </div>
-    <div class="skill-group">
-      <div class="skill-title">Frameworks</div>
-      {frameworks.map(fw => <div class="skill-item">{fw}</div>)}
+    <div class="mx-0 my-[50px]">
+      <div class="skill-title p-[20px] text-[20px] font-bold">Frameworks</div>
+      {frameworks.map(fw => <div class="w-full text-[16px] font-[400] px-[40px] py-[8px]">{fw}</div>)}
     </div>
-    <div class="skill-group">
-      <div class="skill-title">Others</div>
-      {others.map(skill => <div class="skill-item">{skill}</div>)}
+    <div class="mx-0 my-[50px]">
+      <div class="skill-title p-[20px] text-[20px] font-bold">Others</div>
+      {others.map(skill => <div class="w-full text-[16px] font-[400] px-[40px] py-[8px]">{skill}</div>)}
     </div>
   </div>
 </CommonSection>
 
 <style lang="scss">
-  $gray: #EEEEEE;
-  .content-title {
-    margin-bottom: 20px;
-    font-size: 48px;
-    font-weight: 700;
-  }
-  .skills-content {
-    width: 100%;
-    .skill-group {
-      margin: 0 50px;
-      .skill-title {
-        padding: 20px;
-        background-color: $gray;
-        font-size: 20px;
-        font-weight: bold;
-      }
-      .skill-item {
-        width: 100%;
-        font-size: 16px;
-        font-weight: 400;
-        padding: 8px 40px;
-      }
-    }
+  .skill-title {
+    background-color: #EEEEEE;
   }
 </style>

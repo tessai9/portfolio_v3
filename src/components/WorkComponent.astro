@@ -14,57 +14,33 @@ interface Props {
 const {workTitle, workDescription, workImageUrl, workButtons} = Astro.props;
 ---
 
-<section class="work-group">
-  <div class="work-text">
-    <p class="work-text-title">{workTitle}</p>
-    <div class="work-text-description">{workDescription}</div>
-    <div class="work-text-buttons">
+<section class="md:flex md:content-center md:justify-around mb-[50px] md:mb-[30px]">
+  <div class="md:w-1/2 mb-[30px] px-[10px]">
+    <p class="text-[32px] font-[700] mb-[20px]">{workTitle}</p>
+    <div class="text-[18px] font-[400] px-[10px]">{workDescription}</div>
+    <div class="mt-[40px]">
       {workButtons?.map(button =>
         <a href={button.buttonLink} class="work-button">{button.buttonText}</a>
       )}
     </div>
   </div>
-  <div class="work-image">
-    <img src={workImageUrl} />
+  <div class="text-center">
+    <img class="inline md:w-[500px]" src={workImageUrl} />
   </div>
 </section>
 
 <style lang="scss">
-  .work-group {
-    display: flex;
-    align-content: center;
-    justify-content: space-around;
-    padding: 60px;
-    .work-text {
-      width: 50%;
-      .work-text-title {
-        font-size: 48px;
-        font-weight: 700;
-        margin-bottom: 20px;
-      }
-      .work-text-description {
-        font-size: 18px;
-        font-weight: 400;
-      }
-      .work-text-buttons {
-        margin-top: 40px;
-        .work-button {
-          padding: 10px 30px;
-          background-color: #FFF;
-          color: #000;
-          font-weight: 300;
-          text-decoration: none;
-          border: solid 2px #000;
-          border-radius: 20px;
-          box-shadow: 2px 2px 2px gray;
-          &:hover {
-            background-color: #e7e8ec;
-          }
-        }
-      }
-    }
-    .work-image img{
-      width: 500px;
+  .work-button {
+    padding: 10px 30px;
+    background-color: #FFF;
+    color: #000;
+    font-weight: 300;
+    text-decoration: none;
+    border: solid 2px #000;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px gray;
+    &:hover {
+      background-color: #e7e8ec;
     }
   }
 </style>

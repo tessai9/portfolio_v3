@@ -32,23 +32,13 @@ const workItems = [
 ---
 
 <CommonSection idName={"works"}>
-  <div class="works-content">
-    <p class="content-title">Works</p>
-    {workItems.map(item =>
-      <WorkComponent
-        workTitle={item.workTitle}
-        workDescription={item.workDescription}
-        workImageUrl={item.workImageUrl}
-        workButtons={item.workButtons}
-      ></WorkComponent>
-    )}
-  </div>
+  <p class="mb-[20px] text-[48px] font-[700]">Works</p>
+  {workItems.map(item =>
+    <WorkComponent
+      workTitle={item.workTitle}
+      workDescription={item.workDescription}
+      workImageUrl={item.workImageUrl}
+      workButtons={item.workButtons}
+    ></WorkComponent>
+  )}
 </CommonSection>
-
-<style lang="scss">
-  .content-title {
-    margin-bottom: 20px;
-    font-size: 48px;
-    font-weight: 700;
-  }
-</style>

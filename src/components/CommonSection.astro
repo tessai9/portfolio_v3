@@ -6,14 +6,6 @@ interface Props {
 const {idName} =Astro.props;
 ---
 
-<section class="content" id={idName}>
+<section class="md:flex md:flex-wrap p-[60px]" id={idName}>
   <slot />
 </section>
-
-<style lang="scss">
-  section {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 60px;
-  }
-</style>

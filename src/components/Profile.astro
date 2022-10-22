@@ -5,9 +5,9 @@ const communityUrl = 'https://sannomiya.dev';
 ---
 
 <CommonSection idName={"profile"}>
-  <div class="profile-content">
-    <p class="content-title">Profile</p>
-    <div class="content-text">
+  <div class="md:w-1/2 mb-[30px]">
+    <p class="mb-[20px] text-[48px] font-[700]">Profile</p>
+    <div class="px-[10px]">
       <p>こんにちは！てさおです！</p>
       <p>
         普段は神戸にある会社にてRailsエンジニアをしております<br>
@@ -24,25 +24,7 @@ const communityUrl = 'https://sannomiya.dev';
       </p>
     </div>
   </div>
-  <div class="profile-image">
-    <img src="/assets/profile.jpg" />
+  <div class="md:w-1/2 h-full text-center">
+    <img class="inline max-w-[450px]" src="/assets/profile.jpg" />
   </div>
 </CommonSection>
-
-<style lang="scss">
-  .profile-content, .profile-image {
-    width: 50%;
-  }
-  .content-title {
-    margin-bottom: 20px;
-    font-size: 48px;
-    font-weight: 700;
-  }
-  .profile-image {
-    height: 100%;
-    text-align: center;
-    img {
-      max-width: 450px;
-    }
-  }
-</style>
