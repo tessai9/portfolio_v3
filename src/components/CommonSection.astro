@@ -1,7 +1,12 @@
 ---
+interface Props {
+  idName?: string;
+}
+
+const {idName} =Astro.props;
 ---
 
-<section class="content">
+<section class="content" id={idName}>
   <slot />
 </section>
 
