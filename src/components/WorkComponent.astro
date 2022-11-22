@@ -15,7 +15,7 @@ const {workTitle, workDescription, workImageUrl, workButtons} = Astro.props;
 ---
 
 <section class="md:flex md:content-center md:justify-around mb-[50px] md:mb-[30px]">
-  <div class="md:w-1/2 mb-[30px] px-[10px]">
+  <div class="md:w-1/2 mb-[30px] px-[10px] md:min-w-[680px]">
     <p class="text-[32px] font-[700] mb-[20px]">{workTitle}</p>
     <div class="text-[18px] font-[400] px-[10px]">{workDescription}</div>
     <div class="mt-[40px]">
@@ -24,8 +24,8 @@ const {workTitle, workDescription, workImageUrl, workButtons} = Astro.props;
       )}
     </div>
   </div>
-  <div class="text-center">
-    <img class="inline md:w-[500px]" src={workImageUrl} />
+  <div class="text-center md:w-[500px]">
+    { workImageUrl && <img class="inline w-full" src={workImageUrl} /> }
   </div>
 </section>
 
