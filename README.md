@@ -2,10 +2,18 @@
 
 ### URL
 
-https://tesao-portfolio-v3.netlify.app
+https://portfolio.tesao.work
 
 ### Development
 
-```
+```bash
+$ npm install
 $ docker compose up
+```
+
+### Package Update
+
+```bash
+$ npx npm-check-updates
+$ npx npm-check-updates -u
 ```
